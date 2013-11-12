@@ -14,7 +14,7 @@ describe RandomStuffController do
     it "returns nothing" do
       get "nothing"
 
-      response.body.should == ""
+      response.body.blank?.should == true
     end
   end
 
