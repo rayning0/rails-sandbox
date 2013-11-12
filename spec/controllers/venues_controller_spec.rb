@@ -13,7 +13,9 @@ describe VenuesController do
 
       expect(response).to render_template("mobile_index")
     end
+  end
 
+  describe "POST create" do
     it "redirects from #create to #show with a Success! flash message" do
       post "create"
 

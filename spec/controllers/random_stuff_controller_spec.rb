@@ -36,7 +36,6 @@ describe RandomStuffController do
       get "zig"
 
       response.should redirect_to '/zag'
-      helper.params[:redirect].should == true
     end
   end
 end
