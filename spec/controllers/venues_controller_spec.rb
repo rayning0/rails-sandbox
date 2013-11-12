@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "VenuesController" do
+describe VenuesController do
   describe "GET index" do
     it "renders the standard html index page" do
       get :index
