@@ -1,0 +1,2 @@
+class RandomStuffController < ApplicationController
+end
