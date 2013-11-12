@@ -8,4 +8,10 @@ describe RandomStuffController do
       response.body.should == "simple text"
     end
   end
+
+  describe "GET nothing" do
+    get "nothing"
+
+    response.body.should == ""
+  end
 end
