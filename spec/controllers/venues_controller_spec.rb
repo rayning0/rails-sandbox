@@ -13,5 +13,11 @@ describe VenuesController do
 
       expect(response).to render_template("mobile_index")
     end
+
+    it "redirects from #create to #show with a Success! flash message" do
+      post "create"
+
+      flash[:notice].should == "Success!"
+    end
   end
 end

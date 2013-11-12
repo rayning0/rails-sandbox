@@ -10,7 +10,6 @@ describe RandomStuffController do
   end
 
   describe "GET nothing" do
-
     it "returns nothing" do
       get "nothing"
 
@@ -29,6 +28,15 @@ describe RandomStuffController do
       get :classified, token: '123456'
 
       assert_response(200)
+    end
+  end
+
+  describe "GET zig" do
+    it "should redirect to zag with the param 'redirect' set to true" do
+      get "zig"
+
+      response.should redirect_to '/zag'
+      helper.params[:redirect].should == true
     end
   end
 end
