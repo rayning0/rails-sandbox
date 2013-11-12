@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe RandomStuffController do
+describe "RandomStuffController" do
   describe "GET text" do
     it "returns a text formatted response" do
       get :text
