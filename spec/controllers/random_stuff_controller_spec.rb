@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe RandomStuffController do
   describe "GET text" do
-    it "returns text formatted response" do
+    it "returns a text formatted response" do
       get :text
 
       response.body.should == "simple text"
@@ -18,13 +18,13 @@ describe RandomStuffController do
   end
 
   describe "get classified page" do
-    it "should return a 401 without a token" do
+    it "should return a 401 if not passed a token" do
       get :classified
 
       assert_response(401)
     end
 
-    it "should return a 200 with a token" do
+    it "should return a 200 given a token" do
       get :classified, token: '123456'
 
       assert_response(200)
@@ -32,7 +32,7 @@ describe RandomStuffController do
   end
 
   describe "GET zig" do
-    it "should redirect to zag with the param 'redirect' set to true" do
+    it "should redirect to zag" do
       get "zig"
 
       response.should redirect_to '/zag'
