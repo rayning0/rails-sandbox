@@ -18,13 +18,13 @@ describe RandomStuffController do
   end
 
   describe "get classified page" do
-    it "should return a 401 if not passed a token" do
+    it "should return a status of 401 if not passed a token" do
       get :classified
 
       assert_response(401)
     end
 
-    it "should return a 200 given a token" do
+    it "should return a status of 200 given a token" do
       get :classified, token: '123456'
 
       assert_response(200)
