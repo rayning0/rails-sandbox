@@ -5,7 +5,7 @@ describe RandomStuffController do
     it "returns text formatted response" do
       get :text
 
-      reponse.body.should == "simple text"
+      response.body.should == "simple text"
     end
   end
 end
