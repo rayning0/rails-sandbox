@@ -1,4 +1,11 @@
 RailsSandbox::Application.routes.draw do
+  get 'text' => 'random_stuff#text'
+  get 'classified' => 'random_stuff#classified'
+  get 'nothing' => 'random_stuff#nothing'
+  get 'zig' => 'random_stuff#zig'
+  get 'zag' => 'random_stuff#zag'
+
+  resources :venues, only: [:index, :create, :show]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
